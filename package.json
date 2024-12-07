@@ -1,0 +1,15 @@
+{
+  "name": "banking-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "banking app",
+  "scripts": {
+    "build": "npm install --prefix apps/server && npm install --prefix apps/client && npm run build --prefix apps/client",
+    "dev": "npm run dev --prefix apps/server && npm run dev --prefix apps/client",
+    "start": "npm run start --prefix apps/server",
+    "kill": "killall node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
