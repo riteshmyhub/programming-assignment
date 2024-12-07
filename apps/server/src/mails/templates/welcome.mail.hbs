@@ -54,6 +54,22 @@
          padding-top: 20px;
          border-top: 1px solid #eee;
       }
+
+      a {
+         color: #007bff;
+         /* A nice blue color for links */
+         text-decoration: none;
+         /* Remove the underline */
+         font-weight: bold;
+         /* Make it bold for emphasis */
+      }
+
+      a:hover {
+         text-decoration: underline;
+         /* Add underline on hover for accessibility */
+         color: #0056b3;
+         /* Darker blue on hover */
+      }
    </style>
 </head>
 
@@ -64,11 +80,15 @@
       </div>
       <div class="content">
          <p>Hi {{fullname}},</p>
-         <p>Below are your account details for [Your Service Name]. Please keep them secure and do not share with anyone.</p>
+         <p>Below are your account details for [Your Service Name]. Please keep them secure and do not share with
+            anyone.</p>
          <div class="important-info">
             <p><strong>User ID:</strong> {{userID}}</p>
             <p><strong>Password:</strong> {{password}}</p>
          </div>
+         <p>
+            <a href="https://programming-assignment-khab.onrender.com/auth/login" target="_blank">Login to Your Account</a>
+         </p>
          <p>If you did not request these details, please contact our support team immediately.</p>
       </div>
       <div class="footer">
