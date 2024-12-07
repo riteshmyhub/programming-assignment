@@ -17,9 +17,6 @@ export default async function DepositMoneyController(req, res, next) {
       }
       const actual_amount = Number(amount);
       const user = await User.findById(req?.user?._id).select("+amount +transaction_history");
-      if (actual_amount > 200000) {
-         return next(createHttpError.BadRequest("Amount exceeds the maximum limit of ₹ 200,000."));
-      }
       user.amount = user.amount + actual_amount;
       user.transaction_history = [{ amount, description: description || "" }, ...user.transaction_history];
       await user.save();

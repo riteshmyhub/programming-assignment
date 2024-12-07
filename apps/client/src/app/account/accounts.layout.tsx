@@ -48,14 +48,14 @@ export default function AccountLayout() {
                <div className="col-span-6 md:col-span-4">
                   <DepositPage />
                </div>
-               <div className="col-span-12 md:col-span-4">
+               <div className="col-span-6 md:col-span-4">
                   <RequestBalancePage />
+               </div>
+               <div className="col-span-6 md:col-span-4">
+                  <TransactionHistoryPage />
                </div>
                <div className="col-span-12 md:col-span-4">
                   <ProfilePage />
-               </div>
-               <div className="col-span-12 md:col-span-4">
-                  <TransactionHistoryPage />
                </div>
             </div>
          </main>

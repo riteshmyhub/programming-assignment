@@ -20,6 +20,9 @@ export default async function WithdrawMoneyController(req, res, next) {
       if (actual_amount <= 0) {
          return next(createHttpError.BadRequest("Amount is required or invaild input"));
       }
+      if (actual_amount > 200000) {
+         return next(createHttpError.BadRequest("Amount exceeds the maximum limit of ₹ 2,00000."));
+      }
       if (actual_amount > user.amount) {
          return next(createHttpError.BadRequest("you have insufficient amount"));
       }
